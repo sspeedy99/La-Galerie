@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>La Galerie</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/stylesheets/main.css">
+            <link href="stylesheets/all.min.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  </head>
+  <body class = "masthead">
+    <div class="container">
+      <nav class ="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="/"><em>La Galerie</em></a>
+          <div class="collapse navbar-collapse">
+            <ul class = "nav navbar-nav navbar-right">
+              <% if(!currentUser) { %>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/login">Login</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/register">Register</a></li>
+          <%  } else { %>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/pizzas"><%=currentUser.username %></a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/logout">Logout</a></li>
+          <%  } %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <% if(error && error.length > 0) { %>
+      <div class="alert alert-danger", role="alert">
+        <%= error %>
+      </div>
+      <% } %>
+      <% if(success && success.length > 0) { %>
+      <div class="alert alert-success", role="alert">
+        <%= success %>
+      </div>
+      <% } %>
+    </div>
