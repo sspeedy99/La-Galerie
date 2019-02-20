@@ -15,7 +15,7 @@ const pizzaRoutes = require("./routes/pizzas");
 const indexRoutes = require("./routes/index");//getting routes
 const methodOverride = require('method-override');//for put method, to update the databases
 const flash = require('connect-flash');//for flash message
-mongoose.connect("mongodb://sspeedy:shA#9991@speedygalerie-shard-00-00-txpac.mongodb.net:27017,speedygalerie-shard-00-01-txpac.mongodb.net:27017,speedygalerie-shard-00-02-txpac.mongodb.net:27017/test?ssl=true&replicaSet=speedygalerie-shard-0&authSource=admin&retryWrites=true", {useNewUrlParser : true}); //databse on locahost
+mongoose.connect("mongodb://<AtlasUserName>:<AtlasPassword>@speedygalerie-shard-00-00-txpac.mongodb.net:27017,speedygalerie-shard-00-01-txpac.mongodb.net:27017,speedygalerie-shard-00-02-txpac.mongodb.net:27017/test?ssl=true&replicaSet=speedygalerie-shard-0&authSource=admin&retryWrites=true", {useNewUrlParser : true}); //databse on Atlas
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
