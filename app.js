@@ -7,7 +7,6 @@ const port = 5000; //Starting app on port 5000.
 const bodyParser = require("body-parser");//to use req.body.varName
 const mongoose = require('mongoose');// getting mongoose to add a connection between express and mongoDB
 const Pizzas = require("./models/pizza.js");
-var seedDB = require("./seeds");
 var Comment = require("./models/comment");
 var User = require('./models/user');//getting models data
 const passport = require('passport');//passportjs for user authentication
