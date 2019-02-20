@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 app.set("view engine", "ejs"); // Setting the default templates to .ejs
-const port = 5000; //Starting app on port 5000.
+var port = 5000; //Starting app on port 5000.
 //adding body parser to the express app
 const bodyParser = require("body-parser");//to use req.body.varName
 const mongoose = require('mongoose');// getting mongoose to add a connection between express and mongoDB
