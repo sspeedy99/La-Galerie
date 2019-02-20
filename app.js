@@ -17,7 +17,7 @@ const pizzaRoutes = require("./routes/pizzas");
 const indexRoutes = require("./routes/index");//getting routes
 const methodOverride = require('method-override');//for put method, to update the databases
 const flash = require('connect-flash');//for flash message
-mongoose.connect("mongodb://localhost/la_galarie", {useNewUrlParser : true});
+mongoose.connect("mongodb://localhost/la_galarie", {useNewUrlParser : true}); //databse on locahost
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
