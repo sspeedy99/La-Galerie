@@ -105,9 +105,11 @@ body, html {
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
+  /*background-attachment: scroll;*/
 }
 
-.masthead {
+.masthead  {
+	position: relative;
   height: 100%;
 	width: 100%;
   /* height: auto; */
@@ -115,8 +117,10 @@ body {
   background: url("../img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
+
 
 .jumbotron{
     background: #D1D3D5;
