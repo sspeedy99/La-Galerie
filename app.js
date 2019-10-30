@@ -15,6 +15,9 @@ const pizzaRoutes = require("./routes/pizzas");
 const indexRoutes = require("./routes/index");//getting routes
 const methodOverride = require('method-override');//for put method, to update the databases
 const flash = require('connect-flash');//for flash message
+//The Atlas username provided must be the database one, not the one on the Mongo Main.
+//Only the password of the database instance will allow user to connect. Never provide the the MongoAtlas password here, only 
+//DB instance is needed. 
 mongoose.connect("mongodb://<AtlasUserName>:<AtlasPassword>@speedygalerie-shard-00-00-txpac.mongodb.net:27017,speedygalerie-shard-00-01-txpac.mongodb.net:27017,speedygalerie-shard-00-02-txpac.mongodb.net:27017/test?ssl=true&replicaSet=speedygalerie-shard-0&authSource=admin&retryWrites=true", {useNewUrlParser : true}); //databse on Atlas
 
 app.use(express.static(__dirname + "/public"));
